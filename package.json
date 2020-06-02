@@ -14,10 +14,12 @@
     "start:dist": "cross-env DOMAIN=production webpack-dev-server --hide-modules --config build/webpack.prod.config.js --historyApiFallback --inline --open"
   },
   "dependencies": {
+    "ajv": "^6.12.2",
     "amfe-flexible": "^2.2.1",
     "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
     "mint-ui": "^2.2.13",
+    "npm-sass": "^2.3.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue2-hammer": "^2.0.1",
@@ -43,7 +45,6 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-loader": "^3.0.0",
     "px2rem-loader": "0.1.9",

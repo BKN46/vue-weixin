@@ -6,62 +6,62 @@
         <!-- 联系人列表 -->
         <section class="contacts"
                  ref="contactList">
-            <div class="contacts_top">
-                <ul>
-                    <router-link to=""
-                                 tag="li"
-                                 class="contacts_li">
-                        <div class="contacts_img">
-                            <svg>
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#newfriend"></use>
-                            </svg>
-                        </div>
-                        <div class="contacts_text">
-                            新的朋友
-                        </div>
-                    </router-link>
-                    <router-link to=""
-                                 tag="li"
-                                 class="contacts_li">
-                        <div class="contacts_img">
-                            <svg>
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#groupchat"></use>
-                            </svg>
-                        </div>
-                        <div class="contacts_text">
-                            群聊
-                        </div>
-                    </router-link>
-                    <router-link to=""
-                                 tag="li"
-                                 class="contacts_li">
-                        <div class="contacts_img">
-                            <svg>
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#label"></use>
-                            </svg>
-                        </div>
-                        <div class="contacts_text">
-                            标签
-                        </div>
-                    </router-link>
-                    <router-link to=""
-                                 tag="li"
-                                 class="contacts_li">
-                        <div class="contacts_img">
-                            <svg>
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#accounts"></use>
-                            </svg>
-                        </div>
-                        <div class="contacts_text">
-                            公众号
-                        </div>
-                    </router-link>
-                </ul>
-            </div>
+<!--            <div class="contacts_top">-->
+<!--                <ul>-->
+<!--                    <router-link to=""-->
+<!--                                 tag="li"-->
+<!--                                 class="contacts_li">-->
+<!--                        <div class="contacts_img">-->
+<!--                            <svg>-->
+<!--                                <use xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--                                     xlink:href="#newfriend"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                        <div class="contacts_text">-->
+<!--                            新的朋友-->
+<!--                        </div>-->
+<!--                    </router-link>-->
+<!--                    <router-link to=""-->
+<!--                                 tag="li"-->
+<!--                                 class="contacts_li">-->
+<!--                        <div class="contacts_img">-->
+<!--                            <svg>-->
+<!--                                <use xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--                                     xlink:href="#groupchat"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                        <div class="contacts_text">-->
+<!--                            群聊-->
+<!--                        </div>-->
+<!--                    </router-link>-->
+<!--                    <router-link to=""-->
+<!--                                 tag="li"-->
+<!--                                 class="contacts_li">-->
+<!--                        <div class="contacts_img">-->
+<!--                            <svg>-->
+<!--                                <use xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--                                     xlink:href="#label"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                        <div class="contacts_text">-->
+<!--                            标签-->
+<!--                        </div>-->
+<!--                    </router-link>-->
+<!--                    <router-link to=""-->
+<!--                                 tag="li"-->
+<!--                                 class="contacts_li">-->
+<!--                        <div class="contacts_img">-->
+<!--                            <svg>-->
+<!--                                <use xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--                                     xlink:href="#accounts"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                        <div class="contacts_text">-->
+<!--                            公众号-->
+<!--                        </div>-->
+<!--                    </router-link>-->
+<!--                </ul>-->
+<!--            </div>-->
             <div class="contacts_bottom"
                  ref="addlistfather">
                 <ul class="contacts_bottom_ul"
@@ -87,17 +87,17 @@
                         </ul>
                     </li>
                 </ul>
-                <section class="guide_wipe">
-                    <section class="list_guide">
-                        <dl>
-                            <dd v-for="(value, index) in sortlist"
-                                :key="index"
-                                @touchstart="startThing(value)"
-                                @touchend="endThing">{{value}}</dd>
-                        </dl>
-                        <p>#</p>
-                    </section>
-                </section>
+<!--                <section class="guide_wipe">-->
+<!--                    <section class="list_guide">-->
+<!--                        <dl>-->
+<!--                            <dd v-for="(value, index) in sortlist"-->
+<!--                                :key="index"-->
+<!--                                @touchstart="startThing(value)"-->
+<!--                                @touchend="endThing">{{value}}</dd>-->
+<!--                        </dl>-->
+<!--                        <p>#</p>-->
+<!--                    </section>-->
+<!--                </section>-->
                 <section class="big-letter"
                          v-if="letter">
                     <div class="letter-bg"></div>
@@ -227,11 +227,11 @@ export default {
 
 .contacts {
     width: 100%;
-    background: #fff;
-    padding-top: 2.06933rem;
+    background: #ebebeb;
+    padding-top: 2.56933rem;
     .contacts_top {
         ul {
-            width: 14rem;
+            width: 15rem;
             margin: 0 auto;
             -webkit-overflow-scrolling: touch;
             .contacts_li {
@@ -262,14 +262,17 @@ export default {
                 width: 100%;
                 h1 {
                     display: block;
-                    background: #ebebeb;
-                    line-height: 0.9813333333rem;
-                    padding-left: 0.5973333333rem;
+                    /*background: #ebebeb;*/
+                    line-height: 1.1813333333rem;
+                    /*padding-left: 0.5973333333rem;*/
+                    text-align: center;
                     @include sizeColor(0.384rem, #8a8a8a);
                 }
                 ul {
-                    width: 14rem;
+                    width: 15rem;
                     margin: 0 auto;
+                    border-radius: 0.2rem;
+                    background: #fff;
                     li {
                         padding: 0.3413333333rem 0;
                         @include justify(flex-start);

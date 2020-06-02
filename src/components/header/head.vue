@@ -1,11 +1,11 @@
 <template>
 	<header>
 		<section class="logoPart" v-if="logoPart">
-			微信
+			唠会儿
 		</section>
 		<section class="logoPart" v-if="crossover">
 			<section class="goback" @click="goBackThing">
-				<svg fill="#fff"> 
+				<svg fill="#fff">
 					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#back"></use>
 				</svg>
 			</section>
@@ -18,17 +18,17 @@
 				</span>
 			</section>
 		</section>
-		<section class="searchPart" v-if="searchPart">
-			<router-link to='/search' class="searchlink">
-				<svg class="icon-search" fill="#fff">
-				    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
-				</svg>
-			</router-link>
-		</section>
+<!--		<section class="searchPart" v-if="searchPart">-->
+<!--			<router-link to='/search' class="searchlink">-->
+<!--				<svg class="icon-search" fill="#fff">-->
+<!--				    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>-->
+<!--				</svg>-->
+<!--			</router-link>-->
+<!--		</section>-->
 		<section class="addPart" v-if="add" @click="controlShow">
 			<svg class="icon-search">
 			    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#add"></use>
-			</svg>	
+			</svg>
 		</section>
 		<!-- 下拉框 -->
 		<section class="selectpart" v-show="addthing">
@@ -37,7 +37,7 @@
 				<ul>
 					<router-link to='' tag="li" class="selectpart_li">
 						<section class="selectsvg">
-							<svg fill="#fff"> 
+							<svg fill="#fff">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wxspeak"></use>
 							</svg>
 						</section>
@@ -47,7 +47,7 @@
 					</router-link>
 					<router-link to='' tag="li" class="selectpart_li">
 						<section class="selectsvg">
-							<svg fill="#fff"> 
+							<svg fill="#fff">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#addfriend"></use>
 							</svg>
 						</section>
@@ -55,41 +55,41 @@
 							添加朋友
 						</section>
 					</router-link>
-					<router-link to='' tag="li" class="selectpart_li">
-						<section class="selectsvg">
-							<svg fill="#fff"> 
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#onesweep"></use>
-							</svg>
-						</section>
-						<section class="selectext">
-							扫一扫
-						</section>
-					</router-link>
-					<router-link to='' tag="li" class="selectpart_li">
-						<section class="selectsvg">
-							<svg fill="#fff"> 
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#receipt"></use>
-							</svg>
-						</section>
-						<section class="selectext">
-							收付款
-						</section>
-					</router-link>
-					<router-link to='' tag="li" class="selectpart_li">
-						<section class="selectsvg">
-							<svg fill="#fff"> 
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#help"></use>
-							</svg>
-						</section>
-						<section class="selectext">
-							帮助与反馈
-						</section>
-					</router-link>
+<!--					<router-link to='' tag="li" class="selectpart_li">-->
+<!--						<section class="selectsvg">-->
+<!--							<svg fill="#fff">-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#onesweep"></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="selectext">-->
+<!--							扫一扫-->
+<!--						</section>-->
+<!--					</router-link>-->
+<!--					<router-link to='' tag="li" class="selectpart_li">-->
+<!--						<section class="selectsvg">-->
+<!--							<svg fill="#fff">-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#receipt"></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="selectext">-->
+<!--							收付款-->
+<!--						</section>-->
+<!--					</router-link>-->
+<!--					<router-link to='' tag="li" class="selectpart_li">-->
+<!--						<section class="selectsvg">-->
+<!--							<svg fill="#fff">-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#help"></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="selectext">-->
+<!--							帮助与反馈-->
+<!--						</section>-->
+<!--					</router-link>-->
 				</ul>
 			</div>
 		</section>
 		<slot name='person'></slot>
-	</header>	
+	</header>
 </template>
 
 <script>
@@ -98,7 +98,7 @@
 		data(){
 			return{
 				addthing:false,
-				
+
 			}
 		},
 		props: ['logoPart', 'crossover', 'searchPart', 'add', 'person', "search", "clickrefresh"],
@@ -106,7 +106,7 @@
 
 		},
 		mounted(){
-			
+
 		},
 		components:{
 
@@ -133,11 +133,12 @@
 <style lang="scss" scoped>
 	@import "../../style/public";
 	header{
-		@include widthHeight(100%,2.06933rem);
-		background:$black;
+		@include widthHeight(100%,2.36933rem);
+		background:#03a9f4;
 		z-index:200;
 		color:#fff;
 		position: fixed;
+    border-radius: 0 0 0.3rem 0.3rem;
 		.logoPart{
 			@include topcenter;
 			@include sizeColor(0.704rem,#fff);
@@ -152,9 +153,9 @@
 			}
 			.wall{
 				margin:0 0.5333333333rem;
-				@include sizeColor(1.0666666667rem,#2e3235);
+				@include sizeColor(1.0666666667rem,white);
 			}
-			
+
 			.covers_name{
 				span{
 					@include sizeColor(0.704rem,#fff);
@@ -182,7 +183,7 @@
 			svg{
 				@include widthHeight(100%,100%);
 			}
-			
+
 		}
 		.selectpart{
 			position: fixed;
@@ -200,16 +201,18 @@
 			}
 			.selectlist{
 				position: absolute;
+        margin-top: 0.1rem;
 				z-index:100;
 				top:2.06933rem;
 				right:0.4693333333rem;
 				width:8.5333333333rem;
-				background:#373b3e;
+        border-radius: 0.2rem;
+				background:#03a9f4;
 				ul{
 					width:8.5333333333rem;
 					.selectpart_li{
 						@include widthHeight(100%,1.9626666667rem);
-						border-bottom:1px solid #2f3336;
+						/*border-bottom:1px solid #2f3336;*/
 						@include justify(flex-start);
 						align-items:center;
 						.selectsvg{
@@ -225,7 +228,7 @@
 					}
 				}
 			}
-			
+
 		}
 	}
 </style>

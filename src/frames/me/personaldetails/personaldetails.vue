@@ -1,6 +1,6 @@
 <template>
 	<section class="child_page">
-		<head-top crossover="个人信息"></head-top>
+		<head-top logo-part="true"></head-top>
 		<section class="privacy">
 			<section class="privacy_top">
 				<div class="privacy_child">
@@ -41,12 +41,17 @@
 				</div>
 			</section>
 		</section>
-	</section>	
+    <foot-guide></foot-guide>
+    <transition name="router-show">
+      <router-view></router-view>
+    </transition>
+	</section>
 </template>
 
 <script>
 	import headTop from 'src/components/header/head'
-	import {imgurl} from 'src/config/env';
+  import footGuide from 'src/components/footer/foot'
+  import {imgurl} from 'src/config/env';
 	import {mapState, mapActions} from 'vuex'
 	export default{
 		data(){
@@ -55,7 +60,7 @@
 				userHeader:''			//用户头像
 			}
 		},
-		created(){ 
+		created(){
 			this.getUserInfo();
 		},
 		mounted(){
@@ -63,11 +68,11 @@
 			this.userHeader=imgurl + this.userInfo.avatar
 		},
 		components:{
-			headTop,
+			headTop,footGuide,
 		},
 		computed:{
 			...mapState([
-				 "userInfo", 
+				 "userInfo",
 			]),
 		},
 		methods:{
@@ -89,10 +94,11 @@
 		background-color: #ebebeb;
 	}
 	.privacy{
-		padding-top: 3.06933rem;
+		padding-top: 2.36933rem;
 		.privacy_top{
 			background:#fff;
-			margin-bottom:0.8533333333rem;
+      border-radius: 0.2rem;
+      margin: 0.3rem 0.2rem;
 			padding:0 0.5973333333rem;
 			.privacy_child{
 				@include justify(space-between);

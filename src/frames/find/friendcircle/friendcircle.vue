@@ -1,45 +1,45 @@
 <template>
     <section class="child_page">
-        <head-top crossover="朋友圈"
+        <head-top logo-part="true"
                   clickrefresh="friendcicle"
                   @refreshPage="freshPage"></head-top>
         <section class="friend_wipe"
                  ref="friend">
             <section class="friend">
-                <div class="theme">
-                    <div class="themeinit"
-                         @click="exportInput"></div>
-                    <div :class="{shoowimg : !imagestatus}"
-                         @click="exportInput">
-                        <img :src="newImg"
-                             id="imgSrc"
-                             ref="imgSrc"
-                             class="imgSrc" />
-                    </div>
-                    <div class="themetext"
-                         :class="{shoowimg : imagestatus}">轻触更换主题照片</div>
-                    <div class="personImg">
-                        <div class="personame">{{userInfo.name}}</div>
-                        <div class="headimg"
-                             @click="personInfor">
-                            <img :src="userHeader"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="coverinput"
-                     :class="{shoowinput : afterclcik}">
-                    <div class="coverinputbg"
-                         @click="hideIput"></div>
-                    <div class="coverfiletext">
-                        <div class="wipeinput">
-                            更换相册封面
-                            <input type="file"
-                                   class="coverfile"
-                                   id="input_file" />
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="theme">-->
+<!--                    <div class="themeinit"-->
+<!--                         @click="exportInput"></div>-->
+<!--                    <div :class="{shoowimg : !imagestatus}"-->
+<!--                         @click="exportInput">-->
+<!--                        <img :src="newImg"-->
+<!--                             id="imgSrc"-->
+<!--                             ref="imgSrc"-->
+<!--                             class="imgSrc" />-->
+<!--                    </div>-->
+<!--                    <div class="themetext"-->
+<!--                         :class="{shoowimg : imagestatus}">轻触更换主题照片</div>-->
+<!--                    <div class="personImg">-->
+<!--                        <div class="personame">{{userInfo.name}}</div>-->
+<!--                        <div class="headimg"-->
+<!--                             @click="personInfor">-->
+<!--                            <img :src="userHeader"-->
+<!--                                 alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="coverinput"-->
+<!--                     :class="{shoowinput : afterclcik}">-->
+<!--                    <div class="coverinputbg"-->
+<!--                         @click="hideIput"></div>-->
+<!--                    <div class="coverfiletext">-->
+<!--                        <div class="wipeinput">-->
+<!--                            更换相册封面-->
+<!--                            <input type="file"-->
+<!--                                   class="coverfile"-->
+<!--                                   id="input_file" />-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <div class="condition">
                     <ul>
                         <li class="condition_li"
@@ -125,7 +125,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
                 </div>
@@ -147,11 +146,16 @@
                 </section>
             </section>
         </section>
+        <foot-guide></foot-guide>
+        <transition name="router-show">
+          <router-view></router-view>
+        </transition>
     </section>
 </template>
 
 <script>
 import headTop from 'src/components/header/head'
+import footGuide from 'src/components/footer/foot'
 import uploadPreview from 'src/config/uploadPreview.js'
 import { animate } from 'src/config/mUtils'
 import { imgurl } from 'src/config/env';
@@ -208,7 +212,7 @@ export default {
 
     },
     components: {
-        headTop,
+        headTop,footGuide,
     },
     computed: {
         ...mapState([
@@ -614,7 +618,7 @@ export default {
             position: fixed;
             left: 0;
             z-index: 10;
-            bottom: 0;
+            bottom: 2rem;
             width: 100%;
             background: #ebebeb;
             .criticism_con {

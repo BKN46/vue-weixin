@@ -6,19 +6,19 @@
                   add="true"></head-top>
         <div class="dialogue_con">
             <!-- 电脑登录 -->
-            <section class="computer"
-                     v-if="computershow">
-                <router-link to='/computer'
-                             class="computer_link">
-                    <section class="computer_icon">
-                        <svg>
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 xlink:href="#computer"></use>
-                        </svg>
-                    </section>
-                    <section class="computer_text">Windows 微信已登录<span v-if="mute">， 手机通知已关闭</span></section>
-                </router-link>
-            </section>
+<!--            <section class="computer"-->
+<!--                     v-if="computershow">-->
+<!--                <router-link to='/computer'-->
+<!--                             class="computer_link">-->
+<!--                    <section class="computer_icon">-->
+<!--                        <svg>-->
+<!--                            <use xmlns:xlink="http://www.w3.org/1999/xlink"-->
+<!--                                 xlink:href="#computer"></use>-->
+<!--                        </svg>-->
+<!--                    </section>-->
+<!--                    <section class="computer_text">Windows 微信已登录<span v-if="mute">， 手机通知已关闭</span></section>-->
+<!--                </router-link>-->
+<!--            </section>-->
             <!-- 对话列表 -->
             <section class="conversation">
                 <ul>
@@ -135,7 +135,7 @@ export default {
             newtext: false,		//静音时消息提醒
             dialogList: [],
             consumer: false,
-            inputaccounts: "",		//帐号	
+            inputaccounts: "",		//帐号
             inputcode: "",			//密码
             accounts: false,		//清除帐号
             code: false,			//清除密码
@@ -313,13 +313,13 @@ export default {
                 }
             }
             .useid_border {
-                border-color: #45c01a;
+                border-color: #03a9f4;
             }
             .login_botton {
                 margin-top: 1.536rem;
                 text-align: center;
-                background: #1aad19;
-                border: 1px solid #179e16;
+                background: #03a9f4;
+                border: 1px solid #007aff;
                 border-radius: 5px;
                 line-height: 1.6rem;
                 @include sizeColor(0.7rem, #fff);
@@ -332,9 +332,8 @@ export default {
 }
 .dialogue {
     width: 100%;
-    background: #fff;
     .dialogue_con {
-        padding-top: 2.06933rem;
+        padding-top: 2.36933rem;
         -webkit-overflow-scrolling: touch;
         .computer {
             @include widthHeight(100%, 1.9626666667rem);
@@ -362,13 +361,16 @@ export default {
             }
         }
         .conversation {
-            width: 100%;
+            width: auto;
+            margin: 0.2rem;
+            border-radius: 0.1rem;
+            background: #fff;
             ul {
                 width: 100%;
                 li {
                     padding: 0.3413333333rem 0.5973333333rem;
                     box-sizing: border-box;
-                    border-bottom: 1px solid #e0e0e0;
+                    /*border-bottom: 1px solid #e0e0e0;*/
                     @include justify(flex-start);
                     .imgwipe {
                         @include widthHeight(2.0906666667rem, 2.0906666667rem);
@@ -407,6 +409,7 @@ export default {
                             align-items: flex-start;
                             align-content: flex-start;
                             overflow: hidden;
+                            border-radius: 0.1rem;
                             background: #dddbdb;
                             img {
                                 width: 10%;

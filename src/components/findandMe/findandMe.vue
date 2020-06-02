@@ -29,92 +29,49 @@
 					</div>
 				</div>
 			</router-link>
-			<section to="" class="findlist">
-				<div class="find_wipe" @click="photoAlbum">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg fill="#10aeff">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#photo' : '#onesweeptwo'"></use>
-							</svg>
-						</section>
-						<section class="findlist_text" >
-							<span v-if="pathUrl">相册</span>
-							<span v-else>扫一扫</span>
-						</section>
-					</div>
-				</div>
-				<div class="find_wipe" @click="collect">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg>
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#collect' : '#shark' "></use>
-							</svg>
-						</section>
-						<section class="findlist_text">
-							<span v-if="pathUrl">收藏</span>
-							<span v-else>摇一摇</span>
-						</section>
-					</div>
-				</div>
-			</section>
-			<section to="" class="findlist">
-				<div class="find_wipe" @click="wallet">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg>
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#burse' : '#nearby'"></use>
-							</svg>
-						</section>
-						<section class="findlist_text">
-							<span v-if="pathUrl">钱包</span>
-							<span v-else>附近的人</span>
-						</section>
-					</div>
-				</div>
-			</section>
-			<section to="" class="findlist">
-				<div class="find_wipe" @click="shoppSth">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg data-v-38f704c5="" fill="#10aeff">
-								<use data-v-38f704c5="" xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="pathUrl ? '#cardbag' : '#shopping'"></use>
-							</svg>
-						</section>
-						<section class="findlist_text">
-							<span v-if="pathUrl">卡包</span>
-							<span v-else>购物</span>
-						</section>
-					</div>
-				</div>
-				<div class="find_wipe" @click="gamesFace">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg>
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="pathUrl ? '#smile' : '#games' "></use>
-							</svg>
-						</section>
-						<section class="findlist_text">
-							<span v-if="pathUrl">表情</span>
-							<span v-else>游戏</span>
-						</section>
-					</div>
-				</div>
-			</section>
-			<router-link :to="pathUrl ? '/me/settings' : '/find/miniapps'" class="findlist">
-				<div class="find_wipe">
-					<div class="findlist_left">
-						<section class="findlist_svg">
-							<svg fill="#7586db">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="pathUrl ? '#set' : '#small' "></use>
-							</svg>
-						</section>
-						<section class="findlist_text">
-							<span v-if="pathUrl">设置</span>
-							<span v-else>小程序</span>
-						</section>
-					</div>
-				</div>
-			</router-link>
+<!--			<section to="" class="findlist">-->
+<!--				<div class="find_wipe" @click="photoAlbum">-->
+<!--					<div class="findlist_left">-->
+<!--						<section class="findlist_svg">-->
+<!--							<svg fill="#10aeff">-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#photo' : '#onesweeptwo'"></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="findlist_text" >-->
+<!--							<span v-if="pathUrl">相册</span>-->
+<!--							<span v-else>扫一扫</span>-->
+<!--						</section>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="find_wipe" @click="collect">-->
+<!--					<div class="findlist_left">-->
+<!--						<section class="findlist_svg">-->
+<!--							<svg>-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#collect' : '#shark' "></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="findlist_text">-->
+<!--							<span v-if="pathUrl">收藏</span>-->
+<!--							<span v-else>摇一摇</span>-->
+<!--						</section>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
+<!--			<section to="" class="findlist">-->
+<!--				<div class="find_wipe" @click="wallet">-->
+<!--					<div class="findlist_left">-->
+<!--						<section class="findlist_svg">-->
+<!--							<svg>-->
+<!--								<use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href=" pathUrl ? '#burse' : '#nearby'"></use>-->
+<!--							</svg>-->
+<!--						</section>-->
+<!--						<section class="findlist_text">-->
+<!--							<span v-if="pathUrl">钱包</span>-->
+<!--							<span v-else>附近的人</span>-->
+<!--						</section>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
 		</section>
 		<section class="reminder" v-if="alertreminder">
 			<div class="reminder_cover"></div>
@@ -124,14 +81,14 @@
 				<div class="alert_affirm" @click="affirmAlert">确认</div>
 			</div>
 		</section>
-	</section>	
+  </section>
 </template>
 
 <script>
 	import {userInfo} from 'src/service/getData'
 	import {imgurl} from 'src/config/env';
 	import {mapState,mapActions,mapMutations} from 'vuex';
-	import {circle} from 'src/service/getData' 
+	import {circle} from 'src/service/getData'
 	export default{
 		data(){
 			return{
@@ -151,7 +108,7 @@
 			this.gifSrc=imgurl+'reminder.gif';
 		},
 		beforeDestroy(){
-            clearTimeout(this.timer) 
+            clearTimeout(this.timer)
         },
 		beforeMount(){
 			this.getUserInfo();
@@ -166,7 +123,7 @@
 			})
 		},
 		components:{
-			
+
 		},
 		computed:{
 			...mapState([
@@ -202,7 +159,7 @@
 					this.showPart()
 				}else{
 					this.$router.push('/me/collect')
-					
+
 				}
 			},
 			wallet(){//附近的人或钱包
@@ -210,7 +167,7 @@
 					this.showPart()
 				}else{
 					this.$router.push('/me/wallet')
-					
+
 				}
 			},
 			shoppSth(){
@@ -295,7 +252,7 @@
 							@include widthHeight(100%,100%);
 						}
 					}
-					
+
 					.redicon{
 						position: absolute;
 						right:-0.21rem;
