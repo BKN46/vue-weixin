@@ -36,7 +36,7 @@
 		<transition name="router-show">
 		    <router-view></router-view>
 		</transition>
-	</section>	
+	</section>
 </template>
 
 <script>
@@ -45,7 +45,7 @@
 	export default{
 		data(){
 			return{
-				
+
 			}
 		},
 		created(){
@@ -86,6 +86,8 @@
 	}
 	.groupchat{
 		padding-top: 2.9rem;
+    margin:2.7rem 0.2rem 0.2rem 0.2rem;
+    border-radius: 0.2rem;
 		background:#fff;
 		padding:2.9rem 0.8533333333rem 0;
 		ul{
@@ -115,7 +117,7 @@
 		}
 	}
 	.chat{
-		margin-top:0.8533333333rem;
+
 		.chatrecord{
 			padding-left:0.64rem;
 			padding-bottom:0.2133333333rem;
@@ -123,6 +125,8 @@
 		}
 		ul{
 			background:#fff;
+      margin:0.5rem 0.2rem 0.2rem 0.2rem;
+      border-radius: 0.2rem;
 			padding:0 0.64rem;
 			margin-bottom:1rem;
 			li{
@@ -132,7 +136,7 @@
 				@include justify;
 				align-items:center;
 				.push-button{
-					
+
 				}
 				.voice-music{
 					@include sizeColor(0.512rem,#9c9c9c);
