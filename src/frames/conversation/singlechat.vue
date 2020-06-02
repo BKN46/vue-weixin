@@ -5,7 +5,7 @@
 				<router-link to='/singlechat/chatmessage' class="person_link">
 					<svg fill="#fff" class="icon-search">
 					    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#person"></use>
-					</svg>	
+					</svg>
 				</router-link>
 			</section>
 		</head-top>
@@ -93,11 +93,11 @@
 	import {mapState, mapActions,} from 'vuex';
 	import {userWord, chatData} from 'src/service/getData'
 	import {imgurl} from 'src/config/env';
-	import 'src/config/swiper.min.js' 
+	import 'src/config/swiper.min.js'
 	import 'src/style/swiper.min.css'
 	import fetch from 'src/config/fetch'
 
-	export default{ 
+	export default{
 		data(){
 			return{
 				inputmessage:'',//输入的文本内容
@@ -135,7 +135,7 @@
 			this.userInfoData=this.userInfo
 			userWord().then((res) => {
 				//this.conversine=[...res]
-			});	
+			});
 		},
 		components:{
 			headTop,
@@ -144,7 +144,7 @@
 			...mapState([
 			    "infor", "userInfo",
 			]),
-			
+
 		},
 		beforeDestroy(){
             clearTimeout(this.timer);
@@ -247,8 +247,8 @@
 	}
 	.coversation{
 		background-color: #ebebeb;
-		-webkit-overflow-scrolling: touch; 
-		padding-top: 2.06933rem;
+		-webkit-overflow-scrolling: touch;
+		padding-top: 2.36933rem;
 		.coversationlist{
 			position: relative;
 			padding:0 .32rem;
@@ -263,8 +263,8 @@
 				padding-top:.4rem;
 				padding-bottom:2.2rem;
 				width:15.4rem;
-				overflow-scrolling: touch; 
-				-webkit-overflow-scrolling: touch; 
+				overflow-scrolling: touch;
+				-webkit-overflow-scrolling: touch;
 				top:0;
 				li{
 					.other{
@@ -289,7 +289,7 @@
 									@include widthHeight(0.4266666667rem,0.64rem);
 								}
 							}
-							
+
 							.whatsay_text{
 								margin-left:0.6399997rem;
 								max-width:10.3253333333rem;
@@ -302,7 +302,7 @@
 								word-break: break-all;
 							}
 						}
-						
+
 					}
 					.mysay{
 						display:flex;
@@ -315,13 +315,14 @@
 							.whatsay_text{
 								margin-right:0.6399997rem;
 								margin-left:0;
-								background:#9fe658;
+								background:#03a9f4;
+                color: white;
 							}
 						}
 					}
 				}
 			}
-			
+
 		}
 	}
 	footer{
@@ -361,14 +362,14 @@
 					border-bottom:1px solid #e0e0e0;
 				}
 				.lightborder{
-					border-color:#19ad17;
+					border-color:#007aff;
 				}
 			}
 			div:nth-of-type(4){
 				margin-right:0;
 				.send{
 					width:1.8133333333rem;
-					background:#16af17;
+					background:#03a9f4;
 					height:1.3653333333rem;
 					padding:.682666rem 0;
 					border-radius:5px;
@@ -380,7 +381,7 @@
 					}
 				}
 				.send:active{
-					background:#33c034;
+					background:#03a9f4;
 				}
 			}
 		}
